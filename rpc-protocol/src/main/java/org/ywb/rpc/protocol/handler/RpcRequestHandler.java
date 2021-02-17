@@ -21,7 +21,7 @@ import java.util.Objects;
 @Slf4j
 public class RpcRequestHandler extends SimpleChannelInboundHandler<NettyRpcProtocol<NettyRpcRequest>> {
 
-    private Map<String, Object> serviceMap;
+    private final Map<String, Object> serviceMap;
 
     public RpcRequestHandler(Map<String, Object> serviceMap) {
         this.serviceMap = serviceMap;
@@ -67,23 +67,3 @@ public class RpcRequestHandler extends SimpleChannelInboundHandler<NettyRpcProto
         return fastClass.invoke(methodIndex, serviceBean, params);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -30,7 +30,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <netty-rpc.version>1.0.0</netty-rpc.version>
+        <netty-rpc.version>${version}</netty-rpc.version>
     </properties>
 
     <dependencyManagement>
@@ -44,6 +44,36 @@
                 <groupId>com.caucho</groupId>
                 <artifactId>hessian</artifactId>
                 <version>4.0.63</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ywb.rpc</groupId>
+                <artifactId>rpc-core</artifactId>
+                <version>${netty-rpc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ywb.rpc</groupId>
+                <artifactId>rpc-comsumer</artifactId>
+                <version>${netty-rpc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ywb.rpc</groupId>
+                <artifactId>rpc-facade</artifactId>
+                <version>${netty-rpc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ywb.rpc</groupId>
+                <artifactId>rpc-protocol</artifactId>
+                <version>${netty-rpc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ywb.rpc</groupId>
+                <artifactId>rpc-register</artifactId>
+                <version>${netty-rpc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ywb.rpc</groupId>
+                <artifactId>rpc-test</artifactId>
+                <version>${netty-rpc.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

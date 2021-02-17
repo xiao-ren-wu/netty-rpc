@@ -9,7 +9,7 @@
     </parent>
     <groupId>org.ywb.rpc</groupId>
     <artifactId>rpc-provider</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+
     <name>rpc-provider</name>
     <description>Demo project for Spring Boot</description>
     <properties>
@@ -31,15 +31,24 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
+
         <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-all</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>org.ywb.rpc</groupId>
+            <artifactId>rpc-register</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.ywb.rpc</groupId>
+            <artifactId>rpc-protocol</artifactId>
+        </dependency>
+
+
+
     </dependencies>
 
 </project>

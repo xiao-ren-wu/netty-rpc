@@ -1,6 +1,9 @@
 package org.ywb.rpc.core;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
@@ -10,6 +13,9 @@ import java.io.Serializable;
  * @since 1.0.0
  */
 @Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class NettyRpcRequest implements Serializable {
 
     private String serviceVersion;

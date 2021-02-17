@@ -43,7 +43,7 @@ public class HessianRpcSerialization implements NettyRpcSerialization {
             throw new NullPointerException();
         }
         try (ByteArrayInputStream bis = new ByteArrayInputStream(bytes)) {
-            return (T) new HessianSerializerInput().readObject(tClass);
+            return (T) new HessianSerializerInput(bis).readObject(tClass);
         } catch (IOException e) {
             throw new SerializationException(e.getMessage());
         }

@@ -6,6 +6,7 @@ import io.netty.handler.codec.MessageToByteEncoder;
 import org.ywb.rpc.protocol.serialization.SerializationFactory;
 import org.ywb.rpc.protocol.support.MsgHeader;
 import org.ywb.rpc.protocol.support.NettyRpcProtocol;
+import org.ywb.rpc.protocol.support.ProtocolConstants;
 
 /**
  * @author yuwenbo1
@@ -25,7 +26,7 @@ public class NettyRpcEncoder extends MessageToByteEncoder<NettyRpcProtocol<Objec
     @Override
     protected void encode(ChannelHandlerContext channelHandlerContext, NettyRpcProtocol<Object> objectNettyRpcProtocol, ByteBuf byteBuf) throws Exception {
         MsgHeader msgHeader = objectNettyRpcProtocol.getMsgHeader();
-        byteBuf.writeShort(msgHeader.getMagic());
+        byteBuf.writeShort(ProtocolConstants.MAGIC);
         byteBuf.writeByte(msgHeader.getVersion());
         byte serialization = msgHeader.getSerialization();
         byteBuf.writeByte(serialization);

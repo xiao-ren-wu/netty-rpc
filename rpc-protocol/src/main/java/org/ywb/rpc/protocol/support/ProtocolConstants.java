@@ -13,7 +13,7 @@ public interface ProtocolConstants {
     /**
      * 魔数
      */
-    short MAGIC = 0xAD;
+    short MAGIC = 0x10;
     /**
      * 协议版本
      */
