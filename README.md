@@ -1,6 +1,6 @@
 # netty-rpc
 
-> use netty build normal rpc middleware
+> use netty build a normal rpc middleware
 
 | 框架       | 版本         | 功能     |
 | ---------- | ------------ | -------- |
